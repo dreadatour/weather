@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=chrome-session
+Comment=Weather
+Exec=/usr/bin/chrome-session

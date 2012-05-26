@@ -1,0 +1,8 @@
+#!/bin/sh
+openbox-session &
+xrandr --output VGA1 --mode 800x600 &
+xset s blank &
+xset s 0 0 &
+xset -dpms &
+unclutter -idle 1 &
+chromium-browser --kiosk "http://localhost/"

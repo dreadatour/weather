@@ -1,3 +1,4 @@
+#!/usr/bin/perl
 use strict;
 use bytes;
 use Mojo::UserAgent;
