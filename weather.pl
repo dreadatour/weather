@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use strict;
-use bytes;
+use utf8;
 use Mojo::UserAgent;
 use Mojo::Template;
 
@@ -128,7 +128,10 @@ if ($res->success) {
 }
 
 my $tmpl = Mojo::Template->new;
-print $tmpl->render(join('', <DATA>), $is_error, $now, $today, $future);
+my $html = $tmpl->render(join('', <DATA>), $is_error, $now, $today, $future);
+
+binmode STDOUT, ":utf8";
+print $html;
 
 __DATA__
 % my ($is_error, $now, $today, $future) = @_;
